@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Anket Formu</title>
+<style>
+    /* CSS Kodları*/
+  body {
+    background-color: #ffe4e1; /* Açık pembe */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  #survey-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  h1#title {
+    text-align: center;
+    color: #333;
+  }
+
+  p#description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+  }
+
+  input[type="text"]#name {
+    background-color: #d3d3d3; /* Gri */
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input[type="submit"] {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #ff1493;
+  }
+</style>
+
+</head>
+<body>
+
+  <h1 id="title">Kayıt Formu</h1>
+
+  <p id="description">Lütfen aşağıdaki formu doldurarak geri bildirimde bulunun.</p>
+
+  <form id="survey-form">
+
+    <!-- İsim -->
+    <label id="name-label" for="name">İsim:</label>
+    <input type="text" id="name" name="name" placeholder="Adınız" required>
+
+    <!-- E-posta -->
+    <label id="email-label" for="email">E-posta:</label>
+    <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+
+    <!-- Yaş -->
+    <label id="number-label" for="number">Yaş:</label>
+    <input type="number" id="number" name="age" min="10" max="100" placeholder="Yaşınız" required>
+
+    <!-- Cinsiyet Seçimi -->
+    <label for="dropdown">Cinsiyet:</label>
+    <select id="dropdown" name="gender" required>
+      <option value="">Seçiniz</option>
+      <option value="female">Kadın</option>
+      <option value="male">Erkek</option>
+    </select>
+
+    <!-- Nereden Duydunuz? (Radyo) -->
+    <p>Bizi Nereden Duydunuz</p>
+    <label><input type="radio" name="source" value="instagram"> Instagram</label>
+    <label><input type="radio" name="source" value="linkedin"> LinkedIn</label>
+    <label><input type="radio" name="source" value="Sosyal Çevre"> Sosyal Çevre</label>
+    <label><input type="radio" name="source" value="Youtube"> Youtube</label>
+
+    <!-- Onay Kutuları -->
+    <p>Tercihleriniz:</p>
+    <label><input type="checkbox" name="terms" value="accepted"> Terms Of</label>
+    <label><input type="checkbox" name="subscribe" value="yes"> Subscribe For News</label>
+
+    <!-- Yorumlar -->
+    <label for="suggestions">Önerileriniz:</label>
+    <textarea id="suggestions" name="suggestions" rows="4" cols="40" placeholder="Yorumlarınızı buraya yazabilirsiniz..."></textarea>
+
+    <!-- Gönder Butonu -->
+    <input type="submit" id="submit" value="Sign Up">
+
+  </form>
+
+</body>
+</html>
